@@ -1,0 +1,352 @@
+/* General Body & Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 70px; /* Adjusted for fixed nav */
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 30px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px; /* For signup/login forms */
+}
+
+/* Navigation Styles (for Dashboard & Doomclicking) */
+.site-header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 50px; /* Fixed height for consistent padding-top */
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.main-nav li {
+    margin-right: 20px;
+}
+
+.main-nav li.logout-link-li { /* Specific class for logout li to push it right */
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.main-nav a.active {
+    border-bottom: 2px solid #5cb85c; /* Default active color */
+}
+
+/* Form Styles (for Signup, Login, Dashboard Update) */
+h2, h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] { /* If email is ever re-added */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group small {
+    font-size: 0.85em;
+    color: #777;
+    display: block;
+    margin-top: 3px;
+}
+
+button[type="submit"], .btn {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    display: inline-block; /* For button-like links */
+    text-decoration: none; /* For button-like links */
+}
+
+/* Signup Button */
+#signupForm button[type="submit"] {
+    background-color: #5cb85c;
+}
+#signupForm button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Login Button */
+#loginForm button[type="submit"] {
+    background-color: #007bff;
+}
+#loginForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-switch {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+.form-switch a {
+    color: #007bff; /* Default link color */
+    text-decoration: none;
+}
+#loginForm .form-switch a { color: #5cb85c; } /* Signup link on login page */
+#signupForm .form-switch a { color: #007bff; } /* Login link on signup page */
+.form-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Message Display Styles (Errors, Success, Info) */
+.message-display {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid transparent;
+    font-size: 0.95em;
+}
+.message-display.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.message-display.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.message-display.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+
+/* Dashboard Specific Styles */
+.dashboard-container {
+    max-width: 650px;
+}
+.dashboard-container .sub-header {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+.dashboard-container .info-group {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    padding: 12px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+.dashboard-container .info-label {
+    font-weight: bold;
+    color: #333;
+}
+.dashboard-container .info-value {
+    color: #007bff;
+    margin-left: 5px;
+}
+.dashboard-container .action-buttons {
+    display: flex;
+    justify-content: space-between; /* For two buttons */
+    margin-top: 25px;
+}
+.dashboard-container .action-buttons.single-center button {
+    margin: 0 auto; /* Center single button */
+}
+.dashboard-container .btn-primary {
+    background-color: #5cb85c;
+}
+.dashboard-container .btn-primary:hover {
+    background-color: #4cae4c;
+}
+.dashboard-container .btn-danger {
+    background-color: #d9534f;
+}
+.dashboard-container .btn-danger:hover {
+    background-color: #c9302c;
+}
+.dashboard-container hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.dashboard-container #dashboardDeleteForm {
+    text-align: center;
+    margin-top: 20px;
+}
+.dashboard-container #dashboardDeleteForm p {
+    color: #c00;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Doomclicking Game Specific Styles */
+/* --- Existing styles from previous style.css should be here --- */
+/* ... body, .container, h2, .site-header, .main-nav etc. ... */
+
+/* --- Doomclicking Page Specific Styles (Refinements) --- */
+
+/* .doomclicking-page-container is already defined to use .container properties.
+   We can adjust its max-width if needed, but it's already wider.
+   max-width: 700px; (from previous) is probably fine.
+*/
+
+.doomclicking-page-container h2 {
+    /* Inherits general h2 styling, which is good for consistency. */
+    /* If you need it slightly different: */
+    /* margin-bottom: 25px; */
+    /* font-size: 1.8em; */
+}
+
+/* Leaderboard Table - Refined for consistency */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 1em; /* Slightly larger for better readability if space allows */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    border: 1px solid #e0e0e0; /* Add a light border around the table */
+    border-radius: 6px;
+    overflow: hidden; /* For border-radius */
+}
+
+.leaderboard-table thead tr {
+    background-color: #f8f9fa; /* Lighter header background, less dominant */
+    color: #333; /* Darker text for better contrast */
+    text-align: left;
+    font-weight: 600; /* Slightly less bold than default 'bold' */
+    border-bottom: 2px solid #dee2e6; /* Clear separator for header */
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 12px 15px; /* Consistent padding */
+    border-bottom: 1px solid #e9ecef; /* Lighter row separators */
+    vertical-align: middle; /* Align content vertically */
+}
+
+.leaderboard-table tbody tr:nth-of-type(even) {
+    background-color: transparent; /* Remove zebra striping for a cleaner look */
+}
+
+.leaderboard-table tbody tr:hover {
+    background-color: #f1f5f9; /* Subtle hover */
+}
+
+.leaderboard-table tbody tr:last-of-type td {
+    border-bottom: none;
+}
+
+/* Column specific styling for leaderboard - keeping these */
+.leaderboard-table .placement-col { width: 20%; text-align: center; color: #6c757d; } /* Muted color for placement */
+.leaderboard-table .username-col { width: 50%; font-weight: 500; }
+.leaderboard-table .score-col { width: 30%; text-align: right; font-weight: 500; color: #007bff; } /* Score prominent */
+
+.current-user-highlight td {
+    background-color: #e6f2ff !important; /* Softer highlight */
+    /* font-weight: 600; -- username-col already has font-weight */
+}
+.current-user-highlight .username-col {
+    color: #0056b3; /* Darker blue for current user's name */
+}
+
+
+/* Click Area - Refined for better integration */
+.click-area {
+    text-align: center;
+    margin-top: 20px; /* Reduced top margin if table is present */
+    padding: 30px 20px; /* More padding */
+    background-color: #ffffff; /* Match container background or a very light grey */
+    border-radius: 8px; /* Match container border-radius */
+    border: 1px solid #e0e0e0; /* Consistent border */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.counter-display {
+    font-size: 3.5em; /* Slightly smaller to be less overwhelming */
+    font-weight: 700; /* Bold */
+    color: #343a40; /* Dark grey, not quite black */
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.click-button {
+    /* Inherits from general button styles if you add a common class,
+       or redefine slightly for this specific button */
+    padding: 12px 30px; /* Adjusted padding */
+    font-size: 1.25em; /* Adjusted font size */
+    color: white;
+    background-color: #007bff; /* Match primary button color from dashboard */
+    border: none;
+    border-radius: 5px; /* Consistent border radius */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(45, 99, 142, 0.2); /* Softer shadow related to button color */
+    /* width: auto; -- already set */
+    display: inline-block;
+}
+
+.click-button:hover {
+    background-color: #0069d9; /* Slightly darker hover */
+}
+
+.click-button:active {
+    background-color: #0056b3;
+    transform: translateY(1px); /* Softer press effect */
+    box-shadow: 0 1px 2px rgba(45, 99, 142, 0.2);
+}
+
+.click-button:disabled {
+    background-color: #b3d7ff; /* Lighter blue when disabled */
+    border-color: #b3d7ff;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
